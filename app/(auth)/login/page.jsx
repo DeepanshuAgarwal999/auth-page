@@ -15,6 +15,7 @@ const Login = () => {
     e.preventDefault();
     if(!userAccount){
       toast.error("Register yourself first")
+      router.push("/register")
       return;
     }
 
