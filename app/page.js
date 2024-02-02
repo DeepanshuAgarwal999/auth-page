@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "./context/usercontext";
 
-const page = () => {
+const HomePage = () => {
   const { userStatus } = useAuth();
   const router = useRouter();
   React.useEffect(() => {
@@ -32,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;
