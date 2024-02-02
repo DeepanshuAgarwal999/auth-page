@@ -8,11 +8,11 @@ const AccountPage = () => {
   const { userStatus, setUserStatus, userAccount, setUserAccount } = useAuth();
   const [update, setUpdate] = useState(false);
   const [values, setValues] = useState({
-    email: userAccount?.email,
-    name: userAccount?.name,
-    password: userAccount?.password,
-    phone: userAccount?.phone,
-    address: userAccount?.address,
+    email: userAccount?.email || "",
+    name: userAccount?.name || "",
+    password: userAccount?.password || "",
+    phone: userAccount?.phone || "",
+    address: userAccount?.address || "",
   });
   const router = useRouter();
   const handleChange = (e) => {
