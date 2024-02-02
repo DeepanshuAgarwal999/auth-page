@@ -11,9 +11,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const { setUserStatus, userAccount } = useAuth();
-  console.log(userAccount);
   const handleLogin = (e) => {
     e.preventDefault();
+    if(!userAccount){
+      toast.error("Register yourself first")
+      return;
+    }
 
     if (userAccount.email !== email) return;
     if (userAccount.password === password) {
